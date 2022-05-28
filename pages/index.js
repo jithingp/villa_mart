@@ -1,9 +1,19 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Flex,Box,Text,Button } from "@chakra-ui/react"
-
+import axios from 'axios'
 import Property from "../components/Property"
-import { baseUrl,fetchApi } from "../utils/fetchApi"
+import { baseUrl } from "../utils/fetchApi"
+
+const fetchApi = async (url)=>{
+  const {data} = await axios.get((url),{
+      headers: {
+          'x-rapidapi-host': 'bayut.p.rapidapi.com',
+          'x-rapidapi-key': process.env.API_KEY
+        }
+  })
+  return data;
+}
 
 const Banner = ({purpose,title1,title2,desc1,desc2,buttonText,linkname,imageUrl}) => (
   <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">

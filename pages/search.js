@@ -6,7 +6,18 @@ import {BsFilter} from 'react-icons/bs'
 import SearchFilters from '../components/SearchFilters'
 import Property from '../components/Property'
 import noresult from '../assets/images/noresult.svg'
-import { fetchApi,baseUrl } from '../utils/fetchApi'
+import { baseUrl } from '../utils/fetchApi'
+import axios from 'axios'
+
+const fetchApi = async (url)=>{
+  const {data} = await axios.get((url),{
+      headers: {
+          'x-rapidapi-host': 'bayut.p.rapidapi.com',
+          'x-rapidapi-key': process.env.API_KEY
+        }
+  })
+  return data;
+}
 
 const Search=({properties})=>{
     const [searchFilters,setSearchFilters]=useState(false)
