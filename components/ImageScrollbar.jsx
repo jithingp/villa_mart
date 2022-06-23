@@ -29,7 +29,7 @@ const ImageScrollbar=({data})=>(
         {data.map((item)=>(
             <Box width='910px' itemID={item.id} overflow='hidden' p='1' key={item.id}>
                 <Image placeholder='blur' blurDataURL={item.url} src={item.url} width={1000} height={500}
-                 alt='property' sizes='(max-width:500px) 100px,(max-width):1023px 400px,1000px'/>
+                 alt='property' sizes='(max-width:500px) 100px,(max-width:1023px) 400px,1000px'/>
             </Box>
         ))}
     </ScrollMenu>
