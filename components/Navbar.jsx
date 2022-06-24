@@ -7,16 +7,16 @@ import { useMediaQuery } from '@chakra-ui/react'
 
 const Desk =()=>(
     <>
-        <Box fontSize='2xl' color='green.400' fontWeight='normal' marginRight='8'>
+        <Box fontSize='2xl' color='green.500' fontWeight='normal' marginRight='8' fontStyle='oblique'>
             <Link href='/' paddingLeft='2'>Home</Link>
         </Box>
-        <Box fontSize='2xl' color='green.400' fontWeight='normal' marginRight='8'>
+        <Box fontSize='2xl' color='green.500' fontWeight='normal' marginRight='8' fontStyle='oblique'>
             <Link href='/search' paddingLeft='2'>Search</Link>
         </Box>
-        <Box fontSize='2xl' color='green.400' fontWeight='normal' marginRight='8'>
+        <Box fontSize='2xl' color='green.500' fontWeight='normal' marginRight='8' fontStyle='oblique'>
             <Link href='/search?purpose=for-sale' paddingLeft='2'>Buy Property</Link>
         </Box>
-        <Box fontSize='2xl' color='green.400' fontWeight='normal'>
+        <Box fontSize='2xl' color='green.500' fontWeight='normal' marginRight='8' fontStyle='oblique'>
             <Link href='/search?purpose=for-rent' paddingLeft='2'>Rent Property</Link>
         </Box>
     </>
@@ -48,8 +48,8 @@ const Navbar = ()=>{
     const [isLargerThan500] = useMediaQuery('(min-width: 750px)')
     
     return (
-    <Flex p='2' borderBottom='1px' borderColor='gray.500' >
-        <Box fontSize='3xl' color='green.400' fontWeight='bold'>
+    <Flex p='2' borderBottom='1px' borderColor='gray.500' backgroundColor='#212121' >
+        <Box fontSize='3xl' color='green.500' fontWeight='bold' marginLeft='8' fontStyle='italic'>
             <Link href='/' paddingLeft='2'>Villa_Market</Link>
         </Box>
         <Spacer/>

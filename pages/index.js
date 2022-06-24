@@ -33,21 +33,21 @@ export default function Home({propertyForSale,propertyForRent}) {
 
 
   return (
-    <Box >
+    <Box justifyContent='center'>
       
-      <Banner purpose="RENT A HOME" title1="Rental Homes for" title2="Everyone"
+      <Banner purpose="RENT A HOME" title1="Rental Homes for" title2="Everyone" justifyContent='center'
       desc1="Explore Apartments, Villas, Homes" desc2="and more" buttonText="Explore Renting"
       linkname="/search?purpose=for-rent"
       imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"/>
 
-      <Flex flexWrap="wrap">
+      <Flex flexWrap="wrap" justifyContent='center'>
           {propertyForRent.map((property)=><Property property={property} key={property.id}/>)}
       </Flex>
-      <Banner purpose="BUY A HOME" title1="Find, Buy & Own Your" title2="Dream Home"
+      <Banner purpose="BUY A HOME" justifyContent='center' title1="Find, Buy & Own Your" title2="Dream Home"
       desc1="Explore Apartments, Villas, Homes" desc2="and more" buttonText="Explore Buying"
       linkname="/search?purpose=for-sale"
       imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008"/>
-      <Flex flexWrap='wrap'>
+      <Flex flexWrap='wrap' justifyContent='center'>
        {propertyForSale.map((property)=><Property property={property} key={property.id}/>)}
        </Flex>
     </Box>
